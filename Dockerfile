@@ -4,7 +4,18 @@ ENV NVIDIA_VISIBLE_DEVICES \
     ${NVIDIA_VISIBLE_DEVICES:-all}
 ENV NVIDIA_DRIVER_CAPABILITIES \
     ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
-    
+
+RUN apt-get update && apt-get install -y \
+    locales language-pack-ja-base language-pack-ja fonts-takao \
+    sudo lsb-release ca-certificates wget curl git subversion libssl-dev \
+    nano vim htop \
+    dbus-x11 mesa-utils x11-utils x11-apps \
+    terminator xterm tmux \
+    build-essential software-properties-common gdb valgrind  \
+    make \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+
 # Set locale
 RUN  locale-gen ja_JP ja_JP.UTF-8  \
   && update-locale LC_ALL=ja_JP.UTF-8 LANG=ja_JP.UTF-8 \
