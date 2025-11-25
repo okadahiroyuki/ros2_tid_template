@@ -1,4 +1,4 @@
-from ros2_uv_template.subscriber_member_function import MinimalSubscriber
+from ros2_tid_template.subscriber_member_function import MinimalSubscriber
 
 
 def test_subscriber_creation(rclpy_init):

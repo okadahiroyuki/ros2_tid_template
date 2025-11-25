@@ -1,5 +1,5 @@
 [project]
-name = "ros2_uv_template"
+name = "ros2_tid_template"
 version = "0.0.0"
 description = "Add your description here"
 readme = "README.md"

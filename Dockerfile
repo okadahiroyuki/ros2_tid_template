@@ -1,7 +1,7 @@
 FROM ros:jazzy
 
-RUN mkdir -p /ros2_ws/src/ros2_uv_template
-WORKDIR /ros2_ws/src/ros2_uv_template
+RUN mkdir -p /ros2_ws/src/ros2_tid_template
+WORKDIR /ros2_ws/src/ros2_tid_template
 COPY ./ ./
 
 # Setup dependencies
