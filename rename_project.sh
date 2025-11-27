@@ -6,7 +6,7 @@ DEFAULT_NEW_NAME=$(basename "$SCRIPT_DIR")
 usage() {
     echo "Usage: $0 new_name [old_name]"
     echo "  new_name: New project name to replace with (default: $DEFAULT_NEW_NAME)"
-    echo "  old_name: Original project name (default: ros2_uv_template)"
+    echo "  old_name: Original project name (default: ros2_tid_template)"
     exit 1
 }
 
@@ -25,7 +25,7 @@ fi
 
 
 NEW_NAME="${1:-$DEFAULT_NEW_NAME}"
-OLD_NAME="${2:-ros2_uv_template}"
+OLD_NAME="${2:-ros2_tid_template}"
 
 # Validate new name
 if [[ ! "$NEW_NAME" =~ ^[a-z][a-z0-9_]*$ ]]; then
